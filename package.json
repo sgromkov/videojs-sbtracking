@@ -1,6 +1,6 @@
 {
   "name": "videojs-sbtracking",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/videojs-sbtracking.cjs.js",
   "module": "dist/videojs-sbtracking.es.js",
