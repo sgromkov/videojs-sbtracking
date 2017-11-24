@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "document": true,
+    "window": true,
+    "Image": true,
+    "navigator": true,
+    "swfobject": true,
+    "XDomainRequest": true,
+    "XMLHttpRequest": true,
+    "Event": true
+  }
+}
