@@ -134,9 +134,7 @@ class Sbtracking {
 const sbtracking = function(options) {
   const tracker = new Sbtracking(this, videojs.mergeOptions(defaults, options));
 
-  this.ready(() => {
-    tracker.ready();
-  });
+  tracker.ready();
 };
 
 // Register the plugin with video.js.
