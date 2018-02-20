@@ -46,27 +46,21 @@ class Sbtracking {
       return;
     }
 
+    const optionsParams = this.options.params || {};
     const urlParams = [];
+    const flashVersion = (typeof swfobject !== 'undefined') ?
+      swfobject.getFlashPlayerVersion().major : -1;
 
     urlParams.push('action_name=' + encodeURIComponent(name));
     urlParams.push('from=' + encodeURIComponent(document.referrer));
-    urlParams.push('media_state_code=' + this.options.mediaStateCode);
-    urlParams.push('media_id=' + this.options.mediaId);
-    urlParams.push('player_version=7');
-    if (this.options.playeri !== null) {
-      urlParams.push('playeri=' + this.options.playeri);
+
+    for (const key in optionsParams) {
+      if (optionsParams.hasOwnProperty(key) && optionsParams[key] !== null) {
+        const param = key + '=' + encodeURIComponent(optionsParams[key]);
+
+        urlParams.push(param);
+      }
     }
-    urlParams.push('has_adblock=' + 0);
-    urlParams.push('site_owner_id=' + this.options.siteOwnerId);
-    urlParams.push('main_rubric=' + this.options.mainRubric);
-
-    let flashVersion = -1;
-
-    if (typeof swfobject !== 'undefined') {
-      flashVersion = swfobject.getFlashPlayerVersion().major;
-    }
-
-    urlParams.push('flash_version=' + flashVersion);
 
     for (const key in params) {
       if (params.hasOwnProperty(key)) {
@@ -75,6 +69,8 @@ class Sbtracking {
         urlParams.push(param);
       }
     }
+
+    urlParams.push('flash_version=' + flashVersion);
 
     const url = this.options.url + '?' + urlParams.join('&');
 
