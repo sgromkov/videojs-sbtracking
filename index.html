@@ -19,14 +19,21 @@
   <script src="node_modules/video.js/dist/video.js"></script>
   <script src="dist/videojs-sbtracking.js"></script>
   <script>
+
     (function(window, videojs) {
       var player = window.player = videojs('videojs-sbtracking-player');
       player.sbtracking({
-        mediaStateCode: "",
-        mediaId: "",
-        playeri: "",
-        siteOwnerId: "",
-        mainRubric: "",
+        params: {
+          media_state_code: "",
+          media_id: "",
+          playeri: "",
+          player_version: "",
+          has_adblock: "",
+          site_owner_id: "",
+          main_rubric: "",
+          uuid: "",
+          uid: ""
+        },
         hasAds: false,
         videoUrl: "",
         url: "/sbtracking/vplayer"
