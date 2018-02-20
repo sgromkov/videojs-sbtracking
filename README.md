@@ -37,11 +37,17 @@ This is the simplest case. Get the script in whatever way you prefer and include
   var player = videojs('my-video');
 
   player.sbtracking({
-    mediaStateCode: "",
-    mediaId: "",
-    playeri: "",
-    siteOwnerId: "",
-    mainRubric: "",
+    params: {
+      media_state_code: "",
+      media_id: "",
+      playeri: "",
+      player_version: "",
+      has_adblock: "",
+      site_owner_id: "",
+      main_rubric: "",
+      uuid: "",
+      uid: ""
+    },
     hasAds: false,
     videoUrl: "",
     url: "/sbtracking/vplayer"
@@ -64,11 +70,17 @@ require('videojs-sbtracking');
 var player = videojs('my-video');
 
 player.sbtracking({
-  mediaStateCode: "",
-  mediaId: "",
-  playeri: "",
-  siteOwnerId: "",
-  mainRubric: "",
+  params: {
+    media_state_code: "",
+    media_id: "",
+    playeri: "",
+    player_version: "",
+    has_adblock: "",
+    site_owner_id: "",
+    main_rubric: "",
+    uuid: "",
+    uid: ""
+  },
   hasAds: false,
   videoUrl: "",
   url: "/sbtracking/vplayer"
@@ -84,11 +96,17 @@ require(['video.js', 'videojs-sbtracking'], function(videojs) {
   var player = videojs('my-video');
 
   player.sbtracking({
-    mediaStateCode: "",
-    mediaId: "",
-    playeri: "",
-    siteOwnerId: "",
-    mainRubric: "",
+    params: {
+      media_state_code: "",
+      media_id: "",
+      playeri: "",
+      player_version: "",
+      has_adblock: "",
+      site_owner_id: "",
+      main_rubric: "",
+      uuid: "",
+      uid: ""
+    },
     hasAds: false,
     videoUrl: "",
     url: "/sbtracking/vplayer"
