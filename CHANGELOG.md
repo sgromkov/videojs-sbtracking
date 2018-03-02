@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.3 (2018-03-02)
+* [@sgromkov](https://github.com/sgromkov/): Add `video_start` event.
+
 ## 1.0.2 (2018-02-20)
 * [@sgromkov](https://github.com/sgromkov/): Make options params dynamically.
 
