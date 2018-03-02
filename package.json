@@ -1,6 +1,6 @@
 {
   "name": "videojs-sbtracking",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Video.js plugin for sbtracking events",
   "main": "dist/videojs-sbtracking.cjs.js",
   "module": "dist/videojs-sbtracking.es.js",
