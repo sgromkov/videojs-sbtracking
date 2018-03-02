@@ -25,6 +25,46 @@ class Sbtracking {
     this.player = player;
     this.options = options;
     this.events = [];
+    this.initialTime = 0;
+    this.initialTimeInterval = null;
+  }
+
+  setInitialTime() {
+    this.initialTime = Math.floor(this.player.currentTime());
+  }
+
+  videoStarted() {
+    const player = this.player;
+    const currentTime = Math.floor(player.currentTime());
+    const initialTime = this.initialTime;
+
+    return (currentTime >= initialTime + 3);
+  }
+
+  videoStartEventChecker() {
+    this.initialTimeInterval = setInterval(() => {
+      const player = this.player;
+      let additionalParams;
+      let duration = null;
+      const currentTime = Math.floor(player.currentTime());
+
+      if (this.videoStarted()) {
+        clearInterval(this.initialTimeInterval);
+
+        duration = player.duration();
+        if (!isFinite(duration)) {
+          duration = -2;
+        }
+
+        additionalParams = {
+          dur: duration,
+          curr_ts: currentTime
+        };
+
+        this.postTrackingEvent('video_start', additionalParams);
+      }
+    
+    }, 1000);
   }
 
   /**
@@ -111,6 +151,9 @@ class Sbtracking {
 
     this.player.one('play', () => {
       this.postTrackingEvent('content_play', {file: this.options.videoUrl});
+
+      this.setInitialTime();
+      this.videoStartEventChecker();
     });
   }
 }
