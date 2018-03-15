@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.1.1 (2018-03-15)
+* [@sgromkov](https://github.com/sgromkov/): Add `encodeURIComponent` wrapper for flash and player versions.
+
 ## 1.1.0 (2018-03-15)
 * [@sgromkov](https://github.com/sgromkov/): Add VERSION from player instance.
 
