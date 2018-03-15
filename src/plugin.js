@@ -112,8 +112,8 @@ class Sbtracking {
       }
     }
 
-    urlParams.push('flash_version=' + flashVersion);
-    urlParams.push('player_version=' + playerVersion);
+    urlParams.push('flash_version=' + encodeURIComponent(flashVersion));
+    urlParams.push('player_version=' + encodeURIComponent(playerVersion));
 
     const url = this.options.url + '?' + urlParams.join('&');
 
