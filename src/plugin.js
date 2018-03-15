@@ -90,6 +90,8 @@ class Sbtracking {
     const urlParams = [];
     const flashVersion = (typeof swfobject !== 'undefined') ?
       swfobject.getFlashPlayerVersion().major : -1;
+    const playerVersion = (this.player.hasOwnProperty('VERSION')) ? 
+      this.player.VERSION : '';
 
     urlParams.push('action_name=' + encodeURIComponent(name));
     urlParams.push('from=' + encodeURIComponent(document.referrer));
@@ -111,6 +113,7 @@ class Sbtracking {
     }
 
     urlParams.push('flash_version=' + flashVersion);
+    urlParams.push('player_version=' + playerVersion);
 
     const url = this.options.url + '?' + urlParams.join('&');
 
