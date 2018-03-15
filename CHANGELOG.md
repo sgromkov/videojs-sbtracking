@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.1.0 (2018-03-15)
+* [@sgromkov](https://github.com/sgromkov/): Add VERSION from player instance.
+
 ## 1.0.3 (2018-03-02)
 * [@sgromkov](https://github.com/sgromkov/): Add `video_start` event.
 
