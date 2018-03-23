@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.1.2 (2018-03-23)
+* [@sgromkov](https://github.com/sgromkov/): Divided the plugin into modules.
+
 ## 1.1.1 (2018-03-15)
 * [@sgromkov](https://github.com/sgromkov/): Add `encodeURIComponent` wrapper for flash and player versions.
 
