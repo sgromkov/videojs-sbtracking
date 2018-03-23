@@ -31,7 +31,9 @@
           site_owner_id: "",
           main_rubric: "",
           uuid: "",
-          uid: ""
+          uid: "",
+          flash_version: (typeof swfobject !== 'undefined') ? swfobject.getFlashPlayerVersion().major : "-1",
+          from: encodeURIComponent(document.referrer) || null
         },
         hasAds: false,
         videoUrl: "",
